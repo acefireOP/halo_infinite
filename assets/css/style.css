@@ -1,0 +1,294 @@
+*{
+  box-sizing: border-box;
+}
+body, 
+html{
+  height: 100%;
+}
+/*------------------------------------
+CSS HEADER NAV
+------------------------------------*/
+header {
+  position: relative;
+  z-index: 999;
+  width: 100px;
+  height: 100%;
+}
+.logo-container {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  opacity: 0;
+}
+.menu-bar {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  height: 28px;
+  display: none;
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .9);
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  max-height: 350px;
+  height: 100%;
+  border-top: 2px solid #486642;
+  border-bottom: 2px solid #486642;
+}
+nav ul li{
+  position: relative;
+  opacity: 0;
+}
+nav ul li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateY(-25px);
+  transition: transform .5s, opacity .3s;
+  color: #fff;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  margin: auto;
+  height: 17px;
+  border-radius: 5px;
+  background-color: #423e3e;
+  opacity: 0;
+}
+nav ul li:hover:after {
+  transform: translateY(-35px);
+  opacity: 1;
+  padding: 4px 5px 3px;
+}
+nav ul li:first-child:hover:after{
+  content: "Inicio";
+  left: -3px;
+}
+nav ul li:nth-child(2):hover:after{
+  content: "Quien soy";
+  width: 75px;
+  left: -28px;
+}
+nav ul li:nth-child(3):hover:after{
+  content: "Galería";
+  left: -14px;
+}
+nav ul li:nth-child(4):hover:after{
+  content: "Contáctame";
+  left: -32px;
+}
+nav ul li a{
+  color: #ffffff;
+  display: block;
+  position: relative;
+  transition: color .3s;
+}
+nav ul li a:hover{
+  color: #486642;
+}
+/*------------------------------------
+CSS MAIN HOME CONTAINER
+------------------------------------*/
+.main-wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+  background-color: #000000;
+  background-image: url(../../assets/img/bg-halo.jpg);
+  background-size: cover;
+  background-position: top center;
+  overflow: hidden;
+}
+.main-container:after {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .3);
+  top: 0;
+  left: 0;
+}
+.title-halo{
+  width: 100%;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  z-index: 99;
+  opacity: 0;
+  fill: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: max-content;
+}
+.title-halo svg{ 
+  width: 100%;
+  height: 140px;
+}
+.social-networks {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 20px;
+  height: 220px;
+  align-items: center;
+}
+.social-networks a{
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .3s, transform .3s;
+  color: rgb(212, 211, 211);
+  transform: translateY(0);
+}
+.social-networks a:hover{
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+.social-networks a i{
+  font-size: 20px;
+  opacity: 0;
+}
+/*------------------------------------
+CSS MAIN INICIO
+------------------------------------*/
+.main-inicio {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: right .5s;
+  padding: 20px;
+  z-index: 99;
+  color: #ffffff;
+  overflow-y: auto;
+}
+.main-inicio.active {
+  right: 0;
+}
+.main-inicio h2{
+  font-size: 32px;
+  color: #ffffff;
+}
+/*------------------------------------
+CSS MAIN QUIEN SOY YO
+------------------------------------*/
+.main-yo {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: right .5s;
+  padding: 20px;
+  z-index: 99;
+  color: #ffffff;
+}
+.main-yo.active {
+  right: 0;
+}
+/*------------------------------------
+CSS MAIN GALERÍA
+------------------------------------*/
+.main-galeria {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: right .5s;
+  padding: 20px;
+  z-index: 99;
+  color: #ffffff;
+}
+.main-galeria.active {
+  right: 0;
+}
+/*------------------------------------
+CSS MAIN CONTÁCTAME
+------------------------------------*/
+.main-contactame {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: right .5s;
+  padding: 20px;
+  z-index: 99;
+  color: #ffffff;
+}
+.main-contactame.active {
+  right: 0;
+}
+/*------------------------------------
+CSS MEDIA QUERY
+------------------------------------*/
+@media(max-width: 1024px){
+  i.fas.fa-2x {
+    font-size: 1.8em;
+  }
+}
+@media(max-width: 768px){
+  .main-wrapper{
+    flex-flow: column nowrap;
+  }
+  .title-halo{
+    max-width: 400px;
+    padding: 20px 40px;
+  }
+  header{
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+  }
+  .menu-bar {
+    display: block;
+  }
+  nav{
+    position: fixed;
+    width: 80px;
+    top: 0;
+    left: -100%;
+    transition: left .4s;
+  }
+  nav.active{
+    left: 0;
+  }
+}
