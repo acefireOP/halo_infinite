@@ -180,6 +180,14 @@ CSS MAIN HOME CONTAINER
   font-size: 20px;
   opacity: 0;
 }
+.content-left p{
+  margin-bottom: 15px;
+  line-height: 22px;
+}
+.content-right p{
+  margin-bottom: 15px;
+  line-height: 22px;
+}
 /*------------------------------------
 CSS MAIN INICIO
 ------------------------------------*/
@@ -191,7 +199,7 @@ CSS MAIN INICIO
   top: 0;
   right: -100%;
   transition: right .5s;
-  padding: 20px;
+  padding: 40px 20px;
   z-index: 99;
   color: #ffffff;
   overflow-y: auto;
@@ -202,6 +210,10 @@ CSS MAIN INICIO
 .main-inicio h2{
   font-size: 32px;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+.main-inicio img{
+  margin-top: 25px;
 }
 /*------------------------------------
 CSS MAIN QUIEN SOY YO
